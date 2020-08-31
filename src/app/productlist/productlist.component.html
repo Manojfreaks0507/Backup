@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>YOUR HEALTH RECORD</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>AADHAR ID</th>
+          <th>PATIENT NAME</th>
+          <th>PHONE NUMBER</th>
+          <th>VISIT DESCRIPTION</th>
+          <th>PRESCRIBED MEDICINE</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of _productlist">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.phone}}</td>
+        <td>{{product.desc}}</td>
+        <td>{{product.med}}</td>
+          <td><button type="button" class="btn btn-primary" (click)="goToEditProduct(product.id)">EDIT</button>&nbsp;
+              <button type="button" class="btn btn-info" (click)="goToViewProduct(product.id)">VIEW</button>&nbsp;
+              <button type="button" class="btn btn-danger"(click)="deleteProduct(product.id)">DELETE</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <td><button type="button" class="btn btn-success" (click)="goToAddProduct()">ADD NEW RECORD</button></td>&nbsp;
+  </div> 

@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>add new user</h2>
+
+    <form #adduserform="ngForm" (ngSubmit)="addProductformsubmit()">
+        <div class="form-group">
+            <label for="id">Aadhar id:</label>
+            <input type="number" class="form-control" required [(ngModel)]="product.id" name="id" >
+        </div>
+        <div class="form-group">
+            <label for="name">Patient Name:</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone No.:</label>
+            <input type="number" class="form-control" required [(ngModel)]="product.phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="desc">VISIT DESCRIPTION:</label>
+            <input type="textarea" class="form-control" required [(ngModel)]="product.desc" name="desc">
+        </div>
+        <div class="form-group">
+            <label for="med">PRESCRIBED MEDICINE:</label>
+            <input type="textarea" class="form-control" required [(ngModel)]="product.med" name="med">
+        </div>
+        <div class="form-group">
+            <label for="Documents">DOCUMENTS UPLOAD:</label>
+            <input type="file" name="name" multiple><br><br>
+        </div>
+        <div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="button" class="btn btn-warning" (click)="gotolist()">Back</button>
+        </div>
+    </form>
+
+</div>
